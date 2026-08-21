@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Header from "@/src/layout/Header";
-import Navigation from '@/src/layout/Navigation'
+import Navigation from '@/src/layout/Navigation/Navigation'
 
 export default function Home() {
   return (
