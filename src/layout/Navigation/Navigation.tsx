@@ -11,7 +11,7 @@ import DropDownSingle from './components/DropDownSingle';
 import DropDownSimple from './components/DropDownSimple';
 
 const Navigation = () => {
-  const [showMobileNav,setShowMobileNav] = useState(true)
+  const [showMobileNav,setShowMobileNav] = useState(false)
   const { data, loading, error } = useQuery(NAVIGATION_QUERY);
 
 
