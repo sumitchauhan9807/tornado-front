@@ -1,19 +1,18 @@
+import { appendBaseUrl } from "@/src/helpers/common"
 import { useState } from "react"
-
 function DropDownMulti({data}) {
-
+  // console.log(data.dropdowns[0].name,"data.dropdowns[0].name")
   const [active,setActive] = useState(data.dropdowns[0].name)
   let navLinks = []
   let gridCol = 1
   const findLinks = data.dropdowns.find(p => p.name == active)
-  if(findLinks?.links) {
-    navLinks = findLinks?.links
+  if(findLinks?.subDropdowns) {
+    navLinks = findLinks?.subDropdowns
   }
   if(navLinks.length > 4){
     gridCol = 2
   }
   
-
   return (
     <div className="group relative">
       <button type="button" className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-ink-muted transition-colors hover:text-ink-strong">{data.name}<svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-down h-3.5 w-3.5 transition-transform group-hover:rotate-180">
@@ -28,8 +27,7 @@ function DropDownMulti({data}) {
               {data.dropdowns.map((item,index)=>{
                 return (
                   <button key={index} onMouseEnter={()=>{setActive(item.name)}} className={`flex w-full items-center gap-3 rounded-xl px-2.5 py-2.5 text-left transition-colors ${item.name == active ? "bg-surface-muted" : "hover:bg-surface-muted/60"} `} href="/business-phone-number">
-                <span className={`inline-flex h-8 w-8 flex-none items-center justify-center rounded-lg transition-colors ${item.name == active ? "bg-accent-soft text-accent" : "bg-surface-muted text-ink-strong"} `}>
-                  {item.icon}
+                <span   dangerouslySetInnerHTML={{ __html: item.svg }} className={`inline-flex h-8 w-8 flex-none items-center justify-center rounded-lg transition-colors ${item.name == active ? "bg-accent-soft text-accent" : "bg-surface-muted text-ink-strong"} `}>
                 </span>
                 <span className="min-w-0 flex-1">
                   <span className="block text-sm font-semibold leading-tight text-ink-strong">{item.name}</span>
@@ -46,11 +44,12 @@ function DropDownMulti({data}) {
                 {navLinks.map((link,index)=>{
                   return (
                     <a key={index} className="group/item flex items-start gap-3 rounded-xl px-3 py-2.5 transition-colors hover:bg-surface-muted" href="/toll-free-numbers">
-                      <span className="mt-0.5 inline-flex h-9 w-9 flex-none items-center justify-center rounded-lg bg-surface-muted text-ink-strong transition-colors group-hover/item:bg-accent-soft group-hover/item:text-accent">
-                        {link.icon}
+                      <span dangerouslySetInnerHTML={{ __html: link.svg }} className="mt-0.5 inline-flex h-9 w-9 flex-none items-center justify-center rounded-lg bg-surface-muted text-ink-strong transition-colors group-hover/item:bg-accent-soft group-hover/item:text-accent">
+                        {/* {link.icon} */}
+                        {/* <img src={appendBaseUrl(link?.icon?.url)}/> */}
                       </span>
                       <span className="min-w-0">
-                        <span className="block text-sm font-semibold text-ink-strong">{link.title}</span>
+                        <span className="block text-sm font-semibold text-ink-strong">{link.name}</span>
                         <span className="mt-0.5 block line-clamp-2 text-[12px] leading-snug text-ink-muted">{link.desc}</span>
                       </span>
                     </a>

@@ -12,7 +12,7 @@ function DropDownSimple({ data }) {
           {data.dropdowns.map((item, index) => {
             return (
               <a key={index} className="flex items-center gap-2.5 rounded-lg px-3 py-2.5 text-[13.5px] text-ink hover:bg-surface-muted" href="/pricing#plans">
-                {item.icon}
+                <span dangerouslySetInnerHTML={{__html: item.svg}}></span>
                 {item.name}
               </a>
             );

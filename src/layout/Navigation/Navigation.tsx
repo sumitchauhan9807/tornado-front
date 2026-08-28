@@ -1,6 +1,10 @@
 'use client';
 import { useState } from 'react';
+import { useQuery } from "@apollo/client/react";
+import {NAVIGATION_QUERY} from '@/src/graphql/naigation'
 import MobileNavigation from './MobileNav';
+import { PageSkeleton } from '@/src/components/Skeletons'
+
 import { PRODUCTS, FEATURES, INDUSTRIES, RESOURCES, COMAPNY, PRICING } from './Links';
 import DropDownMulti from './components/DropDownMulti';
 import DropDownSingle from './components/DropDownSingle';
@@ -8,6 +12,12 @@ import DropDownSimple from './components/DropDownSimple';
 
 const Navigation = () => {
   const [showMobileNav,setShowMobileNav] = useState(false)
+  const { data, loading, error } = useQuery(NAVIGATION_QUERY);
+
+
+  if (loading) return <PageSkeleton/>;
+  if (error) return <p>Error</p>;
+
   // const showMobileNav = () => {};
   // return <MobileNavigation/>
   return (
@@ -18,15 +28,28 @@ const Navigation = () => {
           <img src="https://tornadodialer.net/assets/images/Logo.svg" alt="The Telephony Co" style={{ height: '60px' }} className="h-10 w-auto md:h-11 " loading="eager" decoding="async" />
         </a>
         <nav className="hidden items-center gap-0.5 lg:flex">
-          <DropDownMulti data={PRODUCTS} />
-          <DropDownMulti data={FEATURES} />
+          {data.navigation.links.map((navLink,index)=>{
+            return (
+              <span key={index}>
+                { navLink.type == 'multi' ? <DropDownMulti data={navLink} /> : null}
+                { navLink.type == 'single' ? <DropDownSingle data={navLink} /> : null}
+                { navLink.type == 'simple' ? <DropDownSimple data={navLink} /> : null}
+                { navLink.type == 'link' ? <a className="rounded-md px-3 py-2 text-sm font-medium transition-colors text-ink-muted hover:text-ink-strong" href="/partners">
+            {navLink.name}
+          </a> : null}
+
+              </span>
+            )
+          })}
+          {/* <DropDownMulti data={PRODUCTS} /> */}
+          {/* <DropDownMulti data={FEATURES} />
           <DropDownSingle data={INDUSTRIES} />
           <DropDownSingle data={RESOURCES} />
-          <DropDownSingle data={COMAPNY} />
-          <a className="rounded-md px-3 py-2 text-sm font-medium transition-colors text-ink-muted hover:text-ink-strong" href="/partners">
+          <DropDownSingle data={COMAPNY} /> */}
+          {/* <a className="rounded-md px-3 py-2 text-sm font-medium transition-colors text-ink-muted hover:text-ink-strong" href="/partners">
             Partners
-          </a>
-          <DropDownSimple data={PRICING} />
+          </a> */}
+          {/* <DropDownSimple data={PRICING} /> */}
         </nav>
         <div className="flex items-center gap-2">
           <a className="items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground [&_svg]:transition-colors h-9 rounded-md px-3 hidden text-ink-muted sm:inline-flex" href="/login">

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { appendBaseUrl } from "@/src/helpers/common"
 
 
 
@@ -31,8 +32,9 @@ function DropDownSingle({data}) {
                       className={`flex w-full items-center gap-3 rounded-xl px-2.5 py-2.5 text-left transition-colors ${item.name == active ? 'bg-surface-muted' : 'hover:bg-surface-muted/60'} `}
                       href="/insurance-contact-center-software"
                     >
-                      <span className={`inline-flex h-8 w-8 flex-none items-center justify-center rounded-lg transition-colors ${item.name == active ? 'bg-accent-soft text-accent' : 'bg-surface-muted text-ink-strong'} `}>
-                        {item.icon}
+                      <span dangerouslySetInnerHTML={{ __html: item.svg }} className={`inline-flex h-8 w-8 flex-none items-center justify-center rounded-lg transition-colors ${item.name == active ? 'bg-accent-soft text-accent' : 'bg-surface-muted text-ink-strong'} `}>
+                        {/* {item.icon} */}
+                         {/* <img viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} width={24} height={24} className="lucide lucide-phone-call h-[18px] w-[18px]" src={appendBaseUrl(item?.icon?.url)}/> */}
                       </span>
                       <span className="min-w-0 flex-1">
                         <span className="block text-sm font-semibold leading-tight text-ink-strong">{item.name}</span>
