@@ -13,7 +13,7 @@ function MobileLinkSingle({ data }) {
         {data.dropdowns.map((item, index) => {
           return (
             <a key={index} className="flex items-center gap-2.5 rounded-md px-4 py-2.5 text-[15px] font-medium text-ink hover:bg-surface-muted" href="/insurance-contact-center-software">
-              {item.icon}
+              <span dangerouslySetInnerHTML={{ __html: item.svg }}></span>
               <span>{item.name}</span>
             </a>
           );
@@ -37,11 +37,11 @@ function MobileLinkMulti({ data }) {
           return (
             <div key={index} className="mb-2">
               <p className="px-3 pb-1 pt-2 font-mono text-[10.5px] uppercase tracking-[0.14em] text-ink-subtle">{item.name}</p>
-              {item.links.map((link, index) => {
+              {item.subDropdowns.map((link, index) => {
                 return (
                   <a key={index} className="flex items-center gap-2.5 rounded-md px-4 py-2.5 text-[15px] font-medium text-ink hover:bg-surface-muted" href="/toll-free-numbers">
-                    {link.icon}
-                    <span>{link.title}</span>
+                    <span dangerouslySetInnerHTML={{ __html: link.svg }}></span>
+                    <span>{link.name}</span>
                   </a>
                 );
               })}
@@ -61,10 +61,18 @@ function MobileLinkMulti({ data }) {
   );
 }
 
-function MobileNav({setShowMobileNav}) {
+function MobileNav({ data, setShowMobileNav }) {
   return (
     <>
-      <div onClick={()=>{setShowMobileNav(false)}} className="fixed inset-0 z-50 bg-black/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0" data-aria-hidden="true" aria-hidden="true" style={{ pointerEvents: 'auto' }} />
+      <div
+        onClick={() => {
+          setShowMobileNav(false);
+        }}
+        className="fixed inset-0 z-50 bg-black/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0"
+        data-aria-hidden="true"
+        aria-hidden="true"
+        style={{ pointerEvents: 'auto' }}
+      />
       <div
         role="dialog"
         id="radix-:r3:"
@@ -112,15 +120,20 @@ function MobileNav({setShowMobileNav}) {
             </div>
           </div>
           <nav className="flex-1 overflow-y-auto px-3 py-3">
-            <MobileLinkMulti data={PRODUCTS} />
-            <MobileLinkMulti data={FEATURES} />
-            <MobileLinkSingle data={INDUSTRIES} />
-            <MobileLinkSingle data={RESOURCES} />
-            <a className="block rounded-md px-4 py-3 text-base font-semibold text-ink hover:bg-surface-muted" href="/partners">
-              Partners
-            </a>
-            <MobileLinkSingle data={COMAPNY} />
-            <MobileLinkSingle data={PRICING} />
+            {data.navigation.links.map((navLink, index) => {
+              return (
+                <span key={index}>
+                  {navLink.type == 'multi' ? <MobileLinkMulti data={navLink} /> : null}
+                  {navLink.type == 'single' ? <MobileLinkSingle data={navLink} /> : null}
+                  {navLink.type == 'simple' ? <MobileLinkSingle data={navLink} /> : null}
+                  {navLink.type == 'link' ? (
+                    <a className="block rounded-md px-4 py-3 text-base font-semibold text-ink hover:bg-surface-muted" href="/partners">
+                      {navLink.name}
+                    </a>
+                  ) : null}
+                </span>
+              );
+            })}
           </nav>
           <div className="space-y-2 border-t border-border p-4">
             <a className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-10 px-4 py-2 w-full bg-accent text-accent-foreground hover:bg-accent-strong" href="/demo">
@@ -137,7 +150,13 @@ function MobileNav({setShowMobileNav}) {
             </a>
           </div>
         </div>
-        <button onClick={()=>{setShowMobileNav(false)}} type="button" className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity data-[state=open]:bg-secondary hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none">
+        <button
+          onClick={() => {
+            setShowMobileNav(false);
+          }}
+          type="button"
+          className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity data-[state=open]:bg-secondary hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none"
+        >
           <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-x h-4 w-4">
             <path d="M18 6 6 18" />
             <path d="m6 6 12 12" />

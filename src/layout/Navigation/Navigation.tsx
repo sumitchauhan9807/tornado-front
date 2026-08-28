@@ -11,7 +11,7 @@ import DropDownSingle from './components/DropDownSingle';
 import DropDownSimple from './components/DropDownSimple';
 
 const Navigation = () => {
-  const [showMobileNav,setShowMobileNav] = useState(false)
+  const [showMobileNav,setShowMobileNav] = useState(true)
   const { data, loading, error } = useQuery(NAVIGATION_QUERY);
 
 
@@ -22,7 +22,7 @@ const Navigation = () => {
   // return <MobileNavigation/>
   return (
     <>
-    {showMobileNav && <MobileNavigation setShowMobileNav={setShowMobileNav}/>}
+    {showMobileNav && <MobileNavigation data={data} setShowMobileNav={setShowMobileNav}/>}
       <div className="container-wide flex h-16 items-center justify-between md:h-20">
         <a className="inline-flex items-center " aria-label="The Telephony Co — Every call matters" href="/">
           <img src="https://tornadodialer.net/assets/images/Logo.svg" alt="The Telephony Co" style={{ height: '60px' }} className="h-10 w-auto md:h-11 " loading="eager" decoding="async" />
