@@ -26,14 +26,19 @@ export const FOOTER_QUERY = gql`
         }
         Copyright
       }
-      logo {
-        url
-      }
+
       subFooter {
         heading
         links {
           link
           name
+        }
+      }
+      logo {
+        height
+        width
+        logo {
+          url
         }
       }
     }

@@ -1,31 +1,23 @@
 'use client';
 import { useState } from 'react';
-import { useQuery } from "@apollo/client/react";
-import {NAVIGATION_QUERY} from '@/src/graphql/naigation'
 import MobileNavigation from './MobileNav';
-import { PageSkeleton } from '@/src/components/Skeletons'
-
-import { PRODUCTS, FEATURES, INDUSTRIES, RESOURCES, COMAPNY, PRICING } from './Links';
 import DropDownMulti from './components/DropDownMulti';
 import DropDownSingle from './components/DropDownSingle';
 import DropDownSimple from './components/DropDownSimple';
+import { appendBaseUrl } from '@/src/helpers/common';
 
-const Navigation = () => {
+const Navigation = ({data}) => {
   const [showMobileNav,setShowMobileNav] = useState(false)
-  const { data, loading, error } = useQuery(NAVIGATION_QUERY);
-
-
-  if (loading) return <PageSkeleton/>;
-  if (error) return <p>Error</p>;
-
-  // const showMobileNav = () => {};
-  // return <MobileNavigation/>
+  const logo = data?.navigation?.logo
   return (
     <>
     {showMobileNav && <MobileNavigation data={data} setShowMobileNav={setShowMobileNav}/>}
       <div className="container-wide flex h-16 items-center justify-between md:h-20">
         <a className="inline-flex items-center " aria-label="The Telephony Co — Every call matters" href="/">
-          <img src="https://tornadodialer.net/assets/images/Logo.svg" alt="The Telephony Co" style={{ height: '60px' }} className="h-10 w-auto md:h-11 " loading="eager" decoding="async" />
+          <img  style={{
+            width: `${logo.width}px`,
+            height: `${logo.height}px`,
+          }} src={appendBaseUrl(logo.logo.url)} alt="The Telephony Co" className="h-10 w-auto md:h-11 " loading="eager" decoding="async" />
         </a>
         <nav className="hidden items-center gap-0.5 lg:flex">
           {data.navigation.links.map((navLink,index)=>{

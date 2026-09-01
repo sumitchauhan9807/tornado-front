@@ -22,7 +22,10 @@ function Footer() {
       <div className="container-wide py-12 md:py-16">
         <div className="flex flex-col gap-6 border-b border-border pb-10 sm:flex-row sm:items-center sm:justify-between">
           <a className="inline-flex items-center " aria-label="The Telephony Co — Every call matters" href="/">
-            <img src={appendBaseUrl(logo.url)} alt="The Telephony Co" className="h-10 w-auto md:h-11 " loading="eager" decoding="async" />
+            <img  style={{
+                  width: `${logo.width}px`,
+                  height: `${logo.height}px`,
+                }} src={appendBaseUrl(logo.logo.url)} alt="The Telephony Co" className="h-10 w-auto md:h-11 " loading="eager" decoding="async" />
           </a>
           <div className="flex items-center gap-2 text-sm">
             <span className="eyebrow mr-1">Region</span>

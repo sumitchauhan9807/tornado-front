@@ -20,6 +20,19 @@ export const NAVIGATION_QUERY = gql`
           }
         }
       }
+      logo {
+        height
+        width
+        logo {
+          url
+        }
+      }
+      preHeader {
+        Phonenumber
+        leftText1
+        leftText2
+        leftText3
+      }
     }
   }
 `;
