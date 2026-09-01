@@ -7,9 +7,16 @@ export const appendBaseUrl = (url: string): string => {
   return assetsURL + url;
 };
 
-export function strapiRichTextToText(richText) {
-    if (!Array.isArray(richText)) {
-        return '';
-    }
-    return richText.map(block => (block.children || []).map(child => child.text || '').join('')).join('\n');
+export function strapiRichTextToText(content) {
+    if (!Array.isArray(content)) return "";
+
+  const data = content
+    .map((block) =>
+      (block.children || [])
+        .map((child) => child.text || "")
+        .join("")
+    )
+    .join("\n");
+    console.log(data)
+    return data
 }

@@ -16,7 +16,6 @@ function Footer() {
   const companyInfo = data?.footer.companyInfo;
   const footerBottom = data?.footer.footerBottom;
 
-  console.log(companyInfo, 'companyInfo');
   return (
     <footer className="mt-10 border-t border-border bg-surface-muted/60 md:mt-12 lg:mt-14">
       <div className="container-wide py-12 md:py-16">
@@ -70,7 +69,7 @@ function Footer() {
                   <circle cx={12} cy={10} r="2.5" />
                 </svg>
               </span>
-              <p className="leading-relaxed">{strapiRichTextToText(companyInfo.main.address)}</p>
+              <p style={{ whiteSpace: "pre-line" }} className="leading-relaxed ">{strapiRichTextToText(companyInfo.main.address)}</p>
             </div>
           </div>
           <div className="md:col-span-2 lg:col-span-3">
