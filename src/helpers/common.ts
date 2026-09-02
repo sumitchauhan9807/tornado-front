@@ -17,6 +17,5 @@ export function strapiRichTextToText(content) {
         .join("")
     )
     .join("\n");
-    console.log(data)
     return data
 }
