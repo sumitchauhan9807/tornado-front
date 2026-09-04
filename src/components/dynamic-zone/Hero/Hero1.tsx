@@ -2,7 +2,7 @@ import HeroAnimations from '../../Hero-Animations';
 import { strapiRichTextToText } from '@/src/helpers/common';
 
 const Hero1 = (props) => {
-  console.log(props, 'Asdasdasdasd');
+  // console.log(props, 'Asdasdasdasd');
   return (
     <section className="relative overflow-hidden">
       <div aria-hidden="true" className="absolute inset-x-0 top-0 -z-10 h-[120%] bg-[radial-gradient(ellipse_110%_60%_at_70%_-10%,hsl(var(--accent)/0.10),transparent_60%)]" />
@@ -63,111 +63,6 @@ const Hero1 = (props) => {
           </div>
         </div>
         <HeroAnimations data={props.animation.content} />
-      </div>
-      <div className="border-y border-border bg-surface-muted/40 py-6">
-        <div className="container mb-4">
-          <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink-subtle">Trusted by carriers &amp; teams routing on our network</span>
-        </div>
-        <div className="group relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,#000_8%,#000_92%,transparent)]">
-          <div className="flex w-max gap-12 animate-[home-marquee_38s_linear_infinite] group-hover:[animation-play-state:paused]">
-            <span className="inline-flex items-center gap-2.5 whitespace-nowrap font-display text-lg font-medium text-ink-subtle">
-              <span className="h-2 w-2 rounded-sm bg-accent/40" />
-              IATA (India){' '}
-            </span>
-            <span className="inline-flex items-center gap-2.5 whitespace-nowrap font-display text-lg font-medium text-ink-subtle">
-              <span className="h-2 w-2 rounded-sm bg-accent/40" />
-              Northeast Support Services{' '}
-            </span>
-            <span className="inline-flex items-center gap-2.5 whitespace-nowrap font-display text-lg font-medium text-ink-subtle">
-              <span className="h-2 w-2 rounded-sm bg-accent/40" />
-              ANS Software Solution{' '}
-            </span>
-            <span className="inline-flex items-center gap-2.5 whitespace-nowrap font-display text-lg font-medium text-ink-subtle">
-              <span className="h-2 w-2 rounded-sm bg-accent/40" />
-              Avyukta Intellicall{' '}
-            </span>
-            <span className="inline-flex items-center gap-2.5 whitespace-nowrap font-display text-lg font-medium text-ink-subtle">
-              <span className="h-2 w-2 rounded-sm bg-accent/40" />
-              In Technologies{' '}
-            </span>
-            <span className="inline-flex items-center gap-2.5 whitespace-nowrap font-display text-lg font-medium text-ink-subtle">
-              <span className="h-2 w-2 rounded-sm bg-accent/40" />
-              Transway Transport{' '}
-            </span>
-            <span className="inline-flex items-center gap-2.5 whitespace-nowrap font-display text-lg font-medium text-ink-subtle">
-              <span className="h-2 w-2 rounded-sm bg-accent/40" />
-              Globilinks Cloud Services{' '}
-            </span>
-            <span className="inline-flex items-center gap-2.5 whitespace-nowrap font-display text-lg font-medium text-ink-subtle">
-              <span className="h-2 w-2 rounded-sm bg-accent/40" />
-              Career Plus Immigration{' '}
-            </span>
-            <span className="inline-flex items-center gap-2.5 whitespace-nowrap font-display text-lg font-medium text-ink-subtle">
-              <span className="h-2 w-2 rounded-sm bg-accent/40" />
-              Book Asia Travels{' '}
-            </span>
-            <span className="inline-flex items-center gap-2.5 whitespace-nowrap font-display text-lg font-medium text-ink-subtle">
-              <span className="h-2 w-2 rounded-sm bg-accent/40" />
-              Target Tours (India){' '}
-            </span>
-            <span className="inline-flex items-center gap-2.5 whitespace-nowrap font-display text-lg font-medium text-ink-subtle">
-              <span className="h-2 w-2 rounded-sm bg-accent/40" />
-              TechBridge Consultancy{' '}
-            </span>
-            <span className="inline-flex items-center gap-2.5 whitespace-nowrap font-display text-lg font-medium text-ink-subtle">
-              <span className="h-2 w-2 rounded-sm bg-accent/40" />
-              Piezel LLC{' '}
-            </span>
-            <span className="inline-flex items-center gap-2.5 whitespace-nowrap font-display text-lg font-medium text-ink-subtle">
-              <span className="h-2 w-2 rounded-sm bg-accent/40" />
-              IATA (India){' '}
-            </span>
-            <span className="inline-flex items-center gap-2.5 whitespace-nowrap font-display text-lg font-medium text-ink-subtle">
-              <span className="h-2 w-2 rounded-sm bg-accent/40" />
-              Northeast Support Services{' '}
-            </span>
-            <span className="inline-flex items-center gap-2.5 whitespace-nowrap font-display text-lg font-medium text-ink-subtle">
-              <span className="h-2 w-2 rounded-sm bg-accent/40" />
-              ANS Software Solution{' '}
-            </span>
-            <span className="inline-flex items-center gap-2.5 whitespace-nowrap font-display text-lg font-medium text-ink-subtle">
-              <span className="h-2 w-2 rounded-sm bg-accent/40" />
-              Avyukta Intellicall{' '}
-            </span>
-            <span className="inline-flex items-center gap-2.5 whitespace-nowrap font-display text-lg font-medium text-ink-subtle">
-              <span className="h-2 w-2 rounded-sm bg-accent/40" />
-              In Technologies{' '}
-            </span>
-            <span className="inline-flex items-center gap-2.5 whitespace-nowrap font-display text-lg font-medium text-ink-subtle">
-              <span className="h-2 w-2 rounded-sm bg-accent/40" />
-              Transway Transport{' '}
-            </span>
-            <span className="inline-flex items-center gap-2.5 whitespace-nowrap font-display text-lg font-medium text-ink-subtle">
-              <span className="h-2 w-2 rounded-sm bg-accent/40" />
-              Globilinks Cloud Services{' '}
-            </span>
-            <span className="inline-flex items-center gap-2.5 whitespace-nowrap font-display text-lg font-medium text-ink-subtle">
-              <span className="h-2 w-2 rounded-sm bg-accent/40" />
-              Career Plus Immigration{' '}
-            </span>
-            <span className="inline-flex items-center gap-2.5 whitespace-nowrap font-display text-lg font-medium text-ink-subtle">
-              <span className="h-2 w-2 rounded-sm bg-accent/40" />
-              Book Asia Travels{' '}
-            </span>
-            <span className="inline-flex items-center gap-2.5 whitespace-nowrap font-display text-lg font-medium text-ink-subtle">
-              <span className="h-2 w-2 rounded-sm bg-accent/40" />
-              Target Tours (India){' '}
-            </span>
-            <span className="inline-flex items-center gap-2.5 whitespace-nowrap font-display text-lg font-medium text-ink-subtle">
-              <span className="h-2 w-2 rounded-sm bg-accent/40" />
-              TechBridge Consultancy{' '}
-            </span>
-            <span className="inline-flex items-center gap-2.5 whitespace-nowrap font-display text-lg font-medium text-ink-subtle">
-              <span className="h-2 w-2 rounded-sm bg-accent/40" />
-              Piezel LLC{' '}
-            </span>
-          </div>
-        </div>
       </div>
     </section>
   );
