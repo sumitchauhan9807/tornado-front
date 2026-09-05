@@ -1,8 +1,8 @@
 const CTA3 = (props) => {
-  console.log(props, 'CTA3');
+  // console.log(props, 'CTA3');
   return (
-    <section className="container py-10 md:py-14 lg:py-16">
-      <div className="reveal relative overflow-hidden rounded-[28px] border border-border bg-gradient-to-br from-accent to-accent-strong p-10 text-center md:p-16 is-visible">
+    <section  className="container py-10 md:py-14 lg:py-16">
+      <div style={{backgroundColor:"#7A17F4"}} className="reveal relative overflow-hidden rounded-[28px] border border-border bg-gradient-to-br from-accent to-accent-strong p-10 text-center md:p-16 is-visible">
         <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(0_0%_100%/0.18),transparent_60%)]" />
         <div className="relative mx-auto max-w-2xl">
           <span className="inline-flex items-center gap-2 font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-white/80">
