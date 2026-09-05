@@ -4,7 +4,7 @@ import Footer from '@/src/layout/Footer';
 import {HOME_QUERY} from '@/src/graphql/home'
 import { useQuery } from "@apollo/client/react";
 import { PageSkeleton } from '@/src/components/Skeletons';
-import DynamicZone from '@/src/components/dynamic-zone';
+import DynamicZoneProducts from '@/src/components/dynamic-zone/product';
 
 export default function Home() {
   const { data, loading, error } = useQuery(HOME_QUERY);
@@ -23,7 +23,7 @@ export default function Home() {
         <div className="min-h-screen bg-background text-ink reveal-ready">
           <Header />
           <main>
-            <DynamicZone data={data?.home?.content}/>
+            <DynamicZoneProducts data={data?.home?.content}/>
             
             
             

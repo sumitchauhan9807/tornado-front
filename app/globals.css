@@ -5572,7 +5572,7 @@ p{
     --tw-gradient-to: hsl(var(--surface-muted) / .4) var(--tw-gradient-to-position)
 }
 .to-transparent{
-    --tw-gradient-to: transparent var(--tw-gradient-to-position)
+    --tw-gradient-to: grey !important
 }
 .bg-\[length\:250\%_100\%\,auto\]{
     background-size:250% 100%,auto

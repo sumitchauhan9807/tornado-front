@@ -3,8 +3,9 @@ import { strapiRichTextToText } from '@/src/helpers/common';
 
 const Hero1 = (props) => {
   // console.log(props, 'Asdasdasdasd');
+  //relative overflow-hidden bg-paper
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden bg-paper">
       <div aria-hidden="true" className="absolute inset-x-0 top-0 -z-10 h-[120%] bg-[radial-gradient(ellipse_110%_60%_at_70%_-10%,hsl(var(--accent)/0.10),transparent_60%)]" />
       <div className="container grid items-center gap-12 pt-12 pb-12 md:pt-16 md:pb-16 lg:grid-cols-[1.05fr_0.95fr]">
         <div>
@@ -20,6 +21,12 @@ const Hero1 = (props) => {
               if (text.type == 'fancy')
                 return (
                   <span key={index} className="text-accent">
+                    {text.text}
+                  </span>
+                );
+              if (text.type == 'underlined')
+                return (
+                  <span key={index} className="accent-mark text-accent">
                     {text.text}
                   </span>
                 );

@@ -67,7 +67,8 @@ export const HOME_QUERY = gql`
             svg
             tags_link
           }
-          layoutType
+          servicesLayoutType:layoutType
+          listsPerRow
         }
         ... on ComponentHomeCta2 {
           blockHeading {
