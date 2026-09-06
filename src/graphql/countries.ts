@@ -14,13 +14,22 @@ export const COUNTRIES_QUERY = gql`
 `;
 
 export const COUNTRY_QUERY = gql`
-  query Country($filters: CountryFiltersInput) {
+  query Country(
+    $filters: CountryFiltersInput
+    $citiesPagination: PaginationArg
+  ) {
     countries(pagination: { limit: 1 }, filters: $filters) {
       CountryCode
       callingCode
       name
       flag {
         url
+      }
+      cities(pagination: $citiesPagination) {
+        name
+        areaCodes{
+          text
+        }
       }
     }
   }
