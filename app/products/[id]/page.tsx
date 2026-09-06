@@ -7,7 +7,7 @@ import { useParams } from "next/navigation";
 import { PageSkeleton } from '@/src/components/Skeletons';
 import DynamicZone from '@/src/components/dynamic-zone/product';
 
-export default function Home() {
+export default function Products() {
    const params = useParams();
 
   const id = params.id;

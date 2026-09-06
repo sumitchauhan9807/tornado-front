@@ -12,3 +12,16 @@ export const COUNTRIES_QUERY = gql`
     }
   }
 `;
+
+export const COUNTRY_QUERY = gql`
+  query Country($filters: CountryFiltersInput) {
+    countries(pagination: { limit: 1 }, filters: $filters) {
+      CountryCode
+      callingCode
+      name
+      flag {
+        url
+      }
+    }
+  }
+`;

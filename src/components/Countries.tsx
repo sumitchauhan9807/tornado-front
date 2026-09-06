@@ -3,6 +3,7 @@ import { PageSkeleton } from '@/src/components/Skeletons';
 import { appendBaseUrl } from '@/src/helpers/common';
 import { gqlClient } from '@/src/http-client/apollo';
 import { useMemo, useState } from 'react';
+import Link from 'next/link';
 
 const Countries = async () => {
   const { data } = await gqlClient.query({
@@ -53,7 +54,7 @@ const CountriesSection = ({ data }) => {
       </div>
       <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
         {filteredCountries.map((country,index) => (
-          <a key={index} className="reveal pp-card group flex items-center gap-3 rounded-2xl border border-border bg-surface px-4 py-3.5 transition-all hover:border-accent hover:-translate-y-0.5 is-visible" href={`/${country.name}`}>
+          <Link href={'/countries/'+country.name} key={index} className="reveal pp-card group flex items-center gap-3 rounded-2xl border border-border bg-surface px-4 py-3.5 transition-all hover:border-accent hover:-translate-y-0.5 is-visible">
             <img style={{ height: '20px' }} src={appendBaseUrl(country.flag.url)} alt={country.name} />
 
             <span className="min-w-0 flex-1">
@@ -66,7 +67,7 @@ const CountriesSection = ({ data }) => {
               <path d="M7 7h10v10" />
               <path d="M7 17 17 7" />
             </svg>
-          </a>
+          </Link>
         ))}
       </div>
     </>
