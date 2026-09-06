@@ -1,4 +1,4 @@
-import { appendBaseUrl } from "@/src/helpers/common"
+import Link from "next/link";
 import { useState } from "react"
 function DropDownMulti({data}) {
   // console.log(data.dropdowns[0].name,"data.dropdowns[0].name")
@@ -43,7 +43,7 @@ function DropDownMulti({data}) {
               <div className={`grid gap-0.5 grid-cols-${gridCol}`}>
                 {navLinks.map((link,index)=>{
                   return (
-                    <a key={index} className="group/item flex items-start gap-3 rounded-xl px-3 py-2.5 transition-colors hover:bg-surface-muted" href="/toll-free-numbers">
+                    <Link key={index} className="group/item flex items-start gap-3 rounded-xl px-3 py-2.5 transition-colors hover:bg-surface-muted" href={'/products/'+link.link}>
                       <span dangerouslySetInnerHTML={{ __html: link.svg }} className="mt-0.5 inline-flex h-9 w-9 flex-none items-center justify-center rounded-lg bg-surface-muted text-ink-strong transition-colors group-hover/item:bg-accent-soft group-hover/item:text-accent">
                         {/* {link.icon} */}
                         {/* <img src={appendBaseUrl(link?.icon?.url)}/> */}
@@ -52,7 +52,7 @@ function DropDownMulti({data}) {
                         <span className="block text-sm font-semibold text-ink-strong">{link.name}</span>
                         <span className="mt-0.5 block line-clamp-2 text-[12px] leading-snug text-ink-muted">{link.desc}</span>
                       </span>
-                    </a>
+                    </Link>
                   )
                 })}
               </div>

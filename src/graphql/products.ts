@@ -82,6 +82,28 @@ export const PRODUCTS_QUERY = gql`
             subText
           }
         }
+        ... on ComponentCommonCountriesSection {
+          blockHeading {
+            SubHeading
+            description
+            heading
+          }
+          subText
+          countries {
+            CountryCode
+            ISOCode
+            name
+            flag {
+              url
+            }
+          }
+        }
+        ... on ComponentCommonContactForm {
+          action
+          heading
+          subText
+          buttonText
+        }
       }
     }
   }

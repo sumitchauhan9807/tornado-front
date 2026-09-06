@@ -1,30 +1,31 @@
+import { lazy, Suspense } from 'react';
+import { PageSkeleton } from '../Skeletons';
+const Hero = lazy(() => import('../dynamic-zone/Hero'));
+const DescriptionInfo = lazy(() => import('../dynamic-zone/DescriptionInfo'));
+const DescriptionInfoBasic = lazy(() => import('../dynamic-zone/DescriptionInfoBasic'));
+const FAQ = lazy(() => import('./FAQ'));
+const CounterUp = lazy(() => import('./CountUp'));
+const CountriesSection = lazy(() => import('./CountriesSection'));
+const ContactForm = lazy(() => import('./ContactForm'));
 
-import { lazy, Suspense } from "react";
-import { PageSkeleton } from "../Skeletons";
-const Hero1 = lazy(() => import("../dynamic-zone/Hero/Hero1"));
-const DescriptionInfo = lazy(() => import("../dynamic-zone/DescriptionInfo"));
-const DescriptionInfoBasic = lazy(() => import("../dynamic-zone/DescriptionInfoBasic"));
-const FAQ = lazy(() => import("./FAQ"));
-const CounterUp = lazy(() => import("./CountUp"));
-
-
-
+//ComponentCommonContactForm
 
 const componentMap = {
-  'ComponentHeroHero1': Hero1,
-  'ComponentCommonServicesLists1': DescriptionInfo,
-  "ComponentCommonDescriptionListsBasic":DescriptionInfoBasic,
-  "ComponentCommonFaq":FAQ,
-  "ComponentCommonCounterUp":CounterUp
-  
+  ComponentHeroHero1: Hero,
+  ComponentCommonServicesLists1: DescriptionInfo,
+  ComponentCommonDescriptionListsBasic: DescriptionInfoBasic,
+  ComponentCommonFaq: FAQ,
+  ComponentCommonCounterUp: CounterUp,
+  ComponentCommonCountriesSection: CountriesSection,
+  ComponentCommonContactForm: ContactForm,
+
   // add others here
 };
-
 
 const DynamicZoneProducts = ({ data }) => {
   if (!data?.length) return null;
   return (
-    <Suspense fallback={<PageSkeleton/>}>
+    <Suspense fallback={<PageSkeleton />}>
       {data.map((component, index) => {
         const Component = componentMap[component.__typename];
 

@@ -21,7 +21,7 @@ export default function Home() {
   if (error) return <p>Error</p>;
   // console.log(data?.home.content[0].)
   // console.log(data)
-  // console.log(data?.products[0],"data?.products[0]")
+  console.log(data?.products[0],"data?.products[0]")
   // return null
   if(data?.products.length == 0) return <h1>{id} product not found</h1>
 

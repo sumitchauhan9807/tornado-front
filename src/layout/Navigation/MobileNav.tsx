@@ -1,4 +1,5 @@
-import { PRODUCTS, FEATURES, INDUSTRIES, RESOURCES, COMAPNY, PRICING } from './Links';
+import Link from "next/link";
+import { appendBaseUrl } from '@/src/helpers/common';
 
 function MobileLinkSingle({ data }) {
   return (
@@ -62,6 +63,8 @@ function MobileLinkMulti({ data }) {
 }
 
 function MobileNav({ data, setShowMobileNav }) {
+  const logo = data?.navigation?.logo
+
   return (
     <>
       <div
@@ -88,7 +91,7 @@ function MobileNav({ data, setShowMobileNav }) {
         <div className="flex h-full flex-col">
           <div className="flex items-center justify-between gap-3 border-b border-border px-5 py-4">
             <a className="inline-flex items-center " aria-label="The Telephony Co — Every call matters" href="/">
-              <img src="https://tornadodialer.net/assets/images/Logo.svg" alt="The Telephony Co" className="h-10 w-auto md:h-11 " loading="eager" decoding="async" />
+              <img src={appendBaseUrl(logo.logo.url)} alt="The Telephony Co" className="h-10 w-auto md:h-11 " loading="eager" decoding="async" />
             </a>
             <div role="group" aria-label="Select region" className="inline-flex items-center gap-0.5 rounded-full border border-border bg-surface p-0.5">
               <span aria-current="page" className="inline-flex items-center gap-1.5 rounded-full bg-ink-strong font-semibold uppercase tracking-[0.1em] text-white px-2 py-1 text-[11px]">

@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import MobileNavigation from './MobileNav';
+import Link from "next/link";
 import DropDownMulti from './components/DropDownMulti';
 import DropDownSingle from './components/DropDownSingle';
 import DropDownSimple from './components/DropDownSimple';
@@ -13,12 +14,12 @@ const Navigation = ({data}) => {
     <>
     {showMobileNav && <MobileNavigation data={data} setShowMobileNav={setShowMobileNav}/>}
       <div className="container-wide flex h-16 items-center justify-between md:h-20">
-        <a className="inline-flex items-center " aria-label="The Telephony Co — Every call matters" href="/">
+        <Link className="inline-flex items-center " aria-label="The Telephony Co — Every call matters" href="/">
           <img  style={{
             width: `${logo.width}px`,
             height: `${logo.height}px`,
           }} src={appendBaseUrl(logo.logo.url)} alt="The Telephony Co" className="h-10 w-auto md:h-11 " loading="eager" decoding="async" />
-        </a>
+        </Link>
         <nav className="hidden items-center gap-0.5 lg:flex">
           {data.navigation.links.map((navLink,index)=>{
             return (
