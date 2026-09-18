@@ -62,8 +62,6 @@ function getYearCalendar(year: number): Month[] {
 export default function Calendar({ year = 2026 }: { year?: number }) {
   const [calendar, setCalendar] = useState<Month[]>(() => getYearCalendar(year));
 
-  const [currentMonth, setCurrentMonth] = useState(0);
-
   // Date range selection
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
@@ -77,95 +75,79 @@ export default function Calendar({ year = 2026 }: { year?: number }) {
 
   const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
-  const month = calendar[currentMonth];
-
   /*
    * Convert a calendar date into YYYY-MM-DD.
    *
-   * Using a string avoids timezone problems and also
-   * makes date comparisons straightforward.
+   * Using strings avoids timezone problems and allows
+   * simple date comparisons.
    */
   const getDateKey = (monthIndex: number, day: number) => {
     return `${year}-${String(monthIndex + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
   };
 
   /*
-   * Select a date from the calendar.
+   * Select a calendar date.
    *
-   * Behavior:
+   * First click:
+   *   Start date
    *
-   * 1. First click:
-   *    Start date = clicked date
-   *    End date = empty
+   * Second click:
+   *   End date
    *
-   * 2. Second click:
-   *    End date = clicked date
-   *    All dates between start/end become highlighted.
+   * Once a complete range exists, clicking another date
+   * starts a new range.
    *
-   * 3. After a complete range exists:
-   *    Clicking another date starts a new range.
-   *
-   * 4. If the second clicked date is before the first date,
-   *    the two dates are automatically ordered.
+   * If the second date is before the first date, the dates
+   * are automatically ordered.
    */
-  const selectDate = (day: Day) => {
-    const dateKey = getDateKey(currentMonth, day.date);
+  const selectDate = (monthIndex: number, day: Day) => {
+  const dateKey = getDateKey(monthIndex, day.date);
 
-    setRangeError('');
-
-    /*
-     * Start a new range when:
-     * - nothing is selected yet, OR
-     * - a complete range already exists.
-     */
-    if (!startDate || (startDate && endDate && startDate !== endDate)) {
-      setStartDate(dateKey);
-      setEndDate('');
-
-      // Load clicked date's existing settings
-      setIsWorking(day.isWorking);
-      setOpenTime(day.openTime || '09:00');
-      setCloseTime(day.closeTime || '18:00');
-
-      return;
-    }
-
-    /*
-     * We have a start date but no end date.
-     * The clicked date becomes the end date.
-     */
-    if (startDate && !endDate) {
-      /*
-       * If the user clicks before the start date,
-       * reverse the selection so that start <= end.
-       */
-      if (dateKey < startDate) {
-        setEndDate(startDate);
-        setStartDate(dateKey);
-      } else {
-        setEndDate(dateKey);
-      }
-
-      return;
-    }
-  };
+  setRangeError('');
 
   /*
-   * Apply the editor values to the selected date range.
-   *
-   * A single date is supported by using:
-   * Start date = End date
+   * No selection yet OR an existing range is complete:
+   * start a new range.
+   */
+  if (!startDate || endDate) {
+    setStartDate(dateKey);
+    setEndDate('');
+
+    // Load clicked date's existing settings
+    setIsWorking(day.isWorking);
+    setOpenTime(day.openTime || '09:00');
+    setCloseTime(day.closeTime || '18:00');
+
+    return;
+  }
+
+  /*
+   * Start exists but end does not.
+   * The clicked date becomes the end date.
+   */
+  if (startDate && !endDate) {
+    if (dateKey < startDate) {
+      setEndDate(startDate);
+      setStartDate(dateKey);
+    } else {
+      setEndDate(dateKey);
+    }
+
+    return;
+  }
+};
+
+  /*
+   * Apply editor values to the selected date range.
    */
   const applyToDateRange = () => {
     setRangeError('');
 
-    // Both dates are required.
     if (!startDate || !endDate) {
       setRangeError('Please select both a start date and an end date.');
       return;
     }
 
-    // Make sure start date isn't after end date.
     if (startDate > endDate) {
       setRangeError('Start date cannot be after the end date.');
       return;
@@ -186,7 +168,7 @@ export default function Calendar({ year = 2026 }: { year?: number }) {
         days: monthData.days.map((day) => {
           const currentDate = getDateKey(monthIndex, day.date);
 
-          // Don't modify dates outside the selected range.
+          // Don't modify dates outside selected range.
           if (currentDate < startDate || currentDate > endDate) {
             return day;
           }
@@ -204,38 +186,12 @@ export default function Calendar({ year = 2026 }: { year?: number }) {
   };
 
   /*
-   * Previous month.
-   */
-  const previousMonth = () => {
-    setCurrentMonth((prev) => Math.max(0, prev - 1));
-  };
-
-  /*
-   * Next month.
-   */
-  const nextMonth = () => {
-    setCurrentMonth((prev) => Math.min(11, prev + 1));
-  };
-
-  /*
    * Start date input.
    */
   const handleStartDateChange = (value: string) => {
     setStartDate(value);
     setRangeError('');
 
-    /*
-     * If the end date is empty, don't leave the user
-     * without an end date.
-     */
-    if (!endDate) {
-      setEndDate('');
-    }
-
-    /*
-     * If the new start date is after the existing end date,
-     * clear the end date because the range is no longer valid.
-     */
     if (endDate && value > endDate) {
       setEndDate('');
     }
@@ -254,21 +210,21 @@ export default function Calendar({ year = 2026 }: { year?: number }) {
   };
 
   /*
-   * Determine whether a date is inside the selected range.
+   * Check whether a date is inside the selected range.
    */
   const isDateInRange = (currentDate: string) => {
     return Boolean(startDate && endDate && currentDate >= startDate && currentDate <= endDate);
   };
 
   /*
-   * Determine whether this is the exact start date.
+   * Check whether this is the selected start date.
    */
   const isStartDate = (currentDate: string) => {
     return Boolean(startDate && currentDate === startDate);
   };
 
   /*
-   * Determine whether this is the exact end date.
+   * Check whether this is the selected end date.
    */
   const isEndDate = (currentDate: string) => {
     return Boolean(endDate && currentDate === endDate);
@@ -276,237 +232,262 @@ export default function Calendar({ year = 2026 }: { year?: number }) {
 
   return (
     <div className="min-h-screen bg-slate-50 p-6">
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-7xl">
         {/* ================= HEADER ================= */}
 
-        <div className="mb-6 flex items-center justify-between">
-          <button
-            type="button"
-            onClick={previousMonth}
-            disabled={currentMonth === 0}
-            className="
-              flex h-11 w-11 items-center justify-center
-              rounded-full border border-slate-200
-              bg-white text-slate-600 shadow-sm
-              transition hover:bg-slate-50
-              disabled:cursor-not-allowed
-              disabled:opacity-30
-            "
-          >
-            ←
-          </button>
+        <div className="mb-8 text-center">
+          <h1 className="text-3xl font-bold text-slate-800">{year} Working Schedule for Sumit Chauhan</h1>
 
-          <div className="text-center">
-            <h1 className="text-2xl font-bold capitalize text-slate-800">{month.name}</h1>
-
-            <p className="mt-1 text-sm text-slate-400">{year}</p>
-          </div>
-
-          <button
-            type="button"
-            onClick={nextMonth}
-            disabled={currentMonth === 11}
-            className="
-              flex h-11 w-11 items-center justify-center
-              rounded-full border border-slate-200
-              bg-white text-slate-600 shadow-sm
-              transition hover:bg-slate-50
-              disabled:cursor-not-allowed
-              disabled:opacity-30
-            "
-          >
-            →
-          </button>
+          <p className="mt-1 text-sm text-slate-400">Select a start date and then an end date to select a range.</p>
         </div>
 
-        {/* ================= CALENDAR ================= */}
+        {/* ================= FULL YEAR CALENDAR ================= */}
 
-        <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-          {/* Weekdays */}
+        <div
+          className="
+          grid
+          grid-cols-1
+          gap-5
+          sm:grid-cols-2
+          lg:grid-cols-3
+        "
+        >
+          {calendar.map((monthData, monthIndex) => (
+            <div
+              key={monthData.name}
+              className="
+                overflow-hidden
+                rounded-2xl
+                border
+                border-slate-200
+                bg-white
+                shadow-sm
+              "
+            >
+              {/* ================= MONTH HEADER ================= */}
 
-          <div className="grid grid-cols-7 border-b border-slate-200 bg-slate-50">
-            {weekDays.map((day) => (
               <div
-                key={day}
                 className="
-                  flex items-center justify-center
-                  py-4 text-sm font-semibold text-slate-500
-                "
+                border-b
+                border-slate-200
+                bg-slate-50
+                px-4
+                py-3
+                text-center
+              "
               >
-                {day}
-              </div>
-            ))}
-          </div>
-
-          {/* Days */}
-
-          <div className="grid grid-cols-7">
-            {/* Empty cells */}
-
-            {Array.from({
-              length: month.firstDay,
-            }).map((_, index) => (
-              <div
-                key={`empty-${index}`}
-                className="
-                  min-h-[145px]
-                  border-b border-r border-slate-100
-                  bg-slate-50/30
+                <h2
+                  className="
+                  text-base
+                  font-bold
+                  text-slate-700
                 "
-              />
-            ))}
-
-            {/* Calendar days */}
-
-            {month.days.map((day) => {
-              const currentDate = getDateKey(currentMonth, day.date);
-
-              const isInRange = isDateInRange(currentDate);
-
-              const isStart = isStartDate(currentDate);
-
-              const isEnd = isEndDate(currentDate);
-
-              return (
-                <button
-                  type="button"
-                  key={day.date}
-                  onClick={() => selectDate(day)}
-                  className={`
-                    relative
-                    flex min-h-[145px]
-                    flex-col items-center justify-center
-                    border-b border-r border-slate-100
-                    p-3 text-center transition
-
-                    ${isInRange ? 'bg-slate-100 ring-2 ring-inset ring-slate-300' : 'hover:bg-slate-50'}
-
-                    ${!day.isWorking ? 'bg-slate-100/60' : 'bg-white'}
-                  `}
                 >
-                  {/* Start / End indicators */}
+                  {monthData.name}
+                </h2>
+              </div>
 
-                  {isStart && (
-                    <span
-                      className="
-                      absolute left-2 top-2
-                      rounded-full bg-slate-800
-                      px-2 py-0.5
-                      text-[9px] font-semibold
-                      uppercase tracking-wide
-                      text-white
+              {/* ================= WEEKDAYS ================= */}
+
+              <div
+                className="
+                grid
+                grid-cols-7
+                border-b
+                border-slate-200
+                bg-slate-50/70
+              "
+              >
+                {weekDays.map((day) => (
+                  <div
+                    key={day}
+                    className="
+                      flex
+                      items-center
+                      justify-center
+                      py-2
+                      text-[10px]
+                      font-semibold
+                      text-slate-400
                     "
-                    >
-                      Start
-                    </span>
-                  )}
-
-                  {isEnd && !isStart && (
-                    <span
-                      className="
-                      absolute right-2 top-2
-                      rounded-full bg-slate-800
-                      px-2 py-0.5
-                      text-[9px] font-semibold
-                      uppercase tracking-wide
-                      text-white
-                    "
-                    >
-                      End
-                    </span>
-                  )}
-
-                  {/* Date */}
-
-                  <span
-                    className={`
-                      flex h-9 w-9 items-center justify-center
-                      rounded-full text-sm font-semibold
-
-                      ${isStart || isEnd ? 'bg-slate-800 text-white' : !day.isWorking ? 'bg-slate-300 text-slate-600' : 'text-slate-700'}
-                    `}
                   >
-                    {day.date}
-                  </span>
+                    {day}
+                  </div>
+                ))}
+              </div>
 
-                  {/* Working hours */}
+              {/* ================= DAYS ================= */}
 
-                  {day.isWorking ? (
-                    <div className="mt-3 space-y-1">
-                      <div>
-                        <p
-                          className="
-                          text-[10px]
-                          uppercase
-                          tracking-wide
-                          text-slate-400
-                        "
-                        >
-                          Open
-                        </p>
+              <div className="grid grid-cols-7">
+                {/* Empty cells before first day */}
 
-                        <p
-                          className="
-                          text-sm
-                          font-medium
-                          text-slate-700
-                        "
-                        >
-                          {day.openTime}
-                        </p>
-                      </div>
-
-                      <div>
-                        <p
-                          className="
-                          text-[10px]
-                          uppercase
-                          tracking-wide
-                          text-slate-400
-                        "
-                        >
-                          Close
-                        </p>
-
-                        <p
-                          className="
-                          text-sm
-                          font-medium
-                          text-slate-700
-                        "
-                        >
-                          {day.closeTime}
-                        </p>
-                      </div>
-                    </div>
-                  ) : (
-                    <span
-                      className="
-                      mt-3
-                      rounded-full
-                      bg-slate-200
-                      px-3 py-1
-                      text-xs
-                      font-medium
-                      text-slate-500
+                {Array.from({
+                  length: monthData.firstDay,
+                }).map((_, index) => (
+                  <div
+                    key={`empty-${index}`}
+                    className="
+                      min-h-[76px]
+                      border-b
+                      border-r
+                      border-slate-100
+                      bg-slate-50/30
                     "
+                  />
+                ))}
+
+                {/* Month days */}
+
+                {monthData.days.map((day) => {
+                  const currentDate = getDateKey(monthIndex, day.date);
+
+                  const isInRange = isDateInRange(currentDate);
+
+                  const isStart = isStartDate(currentDate);
+
+                  const isEnd = isEndDate(currentDate);
+
+                  return (
+                    <button
+                      type="button"
+                      key={day.date}
+                      onClick={() => selectDate(monthIndex, day)}
+                      className={`
+                        relative
+                        flex
+                        min-h-[76px]
+                        flex-col
+                        items-center
+                        justify-center
+                        border-b
+                        border-r
+                        border-slate-100
+                        p-1
+                        text-center
+                        transition
+
+                        ${isInRange ? 'bg-slate-100 ring-1 ring-inset ring-slate-300' : day.isWorking ? 'bg-white hover:bg-slate-50' : 'bg-slate-100/60 hover:bg-slate-200/60'}
+                      `}
                     >
-                      Closed
-                    </span>
-                  )}
-                </button>
-              );
-            })}
-          </div>
+                      {/* Start label */}
+
+                      {isStart && (
+                        <span
+                          className="
+                          absolute
+                          left-0.5
+                          top-0.5
+                          rounded
+                          bg-slate-800
+                          px-1
+                          py-0.5
+                          text-[7px]
+                          font-semibold
+                          uppercase
+                          text-white
+                        "
+                        >
+                          S
+                        </span>
+                      )}
+
+                      {/* End label */}
+
+                      {isEnd && !isStart && (
+                        <span
+                          className="
+                          absolute
+                          right-0.5
+                          top-0.5
+                          rounded
+                          bg-slate-800
+                          px-1
+                          py-0.5
+                          text-[7px]
+                          font-semibold
+                          uppercase
+                          text-white
+                        "
+                        >
+                          E
+                        </span>
+                      )}
+
+                      {/* Date */}
+
+                      <span
+                        className={`
+                          flex
+                          h-7
+                          w-7
+                          items-center
+                          justify-center
+                          rounded-full
+                          text-xs
+                          font-semibold
+
+                          ${isStart || isEnd ? 'bg-slate-800 text-white' : !day.isWorking ? 'bg-slate-300 text-slate-600' : 'text-slate-700'}
+                        `}
+                      >
+                        {day.date}
+                      </span>
+
+                      {/* Working hours */}
+
+                      {day.isWorking ? (
+                        <div
+                          className="
+                          mt-1
+                          leading-none
+                        "
+                        >
+                          <p
+                            className="
+                            text-[12px]
+                            text-slate-400
+                          "
+                          >
+                            {day.openTime}
+                          </p>
+
+                          <p
+                            className="
+                            mt-0.5
+                            text-[12px]
+                            text-slate-500
+                          "
+                          >
+                            {day.closeTime}
+                          </p>
+                        </div>
+                      ) : (
+                        <span
+                          className="
+                          mt-1
+                          text-[8px]
+                          font-medium
+                          text-slate-400
+                        "
+                        >
+                          Closed
+                        </span>
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* ================= RANGE EDITOR ================= */}
 
         <div
           className="
-          mt-6
+          mt-8
           rounded-2xl
-          border border-slate-200
+          border
+          border-slate-200
           bg-white
           p-6
           shadow-sm
@@ -520,7 +501,7 @@ export default function Calendar({ year = 2026 }: { year?: number }) {
               text-slate-800
             "
             >
-              Edit Date Range
+              Edit Client Working Schedule
             </h2>
 
             <p
@@ -536,10 +517,16 @@ export default function Calendar({ year = 2026 }: { year?: number }) {
 
           {/* ================= DATE RANGE ================= */}
 
-          <div className="grid gap-5 sm:grid-cols-2">
+          <div
+            className="
+            grid
+            gap-5
+            sm:grid-cols-2
+          "
+          >
             {/* Start date */}
 
-            <div>
+            {/* <div>
               <label
                 htmlFor="start-date"
                 className="
@@ -574,11 +561,11 @@ export default function Calendar({ year = 2026 }: { year?: number }) {
                   focus:border-slate-400
                 "
               />
-            </div>
+            </div> */}
 
             {/* End date */}
 
-            <div>
+            {/* <div>
               <label
                 htmlFor="end-date"
                 className="
@@ -613,10 +600,10 @@ export default function Calendar({ year = 2026 }: { year?: number }) {
                   focus:border-slate-400
                 "
               />
-            </div>
+            </div> */}
           </div>
 
-          {/* Range status */}
+          {/* ================= RANGE STATUS ================= */}
 
           {startDate && (
             <div
@@ -624,7 +611,8 @@ export default function Calendar({ year = 2026 }: { year?: number }) {
               mt-4
               rounded-lg
               bg-slate-50
-              px-4 py-3
+              px-4
+              py-3
               text-sm
               text-slate-600
             "
@@ -632,7 +620,14 @@ export default function Calendar({ year = 2026 }: { year?: number }) {
               {!endDate ? (
                 <>
                   Start date selected: <span className="font-semibold">{startDate}</span>
-                  <span className="ml-2 text-slate-400">— now select an end date</span>
+                  <span
+                    className="
+                    ml-2
+                    text-slate-400
+                  "
+                  >
+                    — now select an end date
+                  </span>
                 </>
               ) : startDate === endDate ? (
                 <>
@@ -646,10 +641,17 @@ export default function Calendar({ year = 2026 }: { year?: number }) {
             </div>
           )}
 
-          {/* Error */}
+          {/* ================= ERROR ================= */}
 
           {rangeError && (
-            <p className="mt-3 text-sm text-red-600" role="alert">
+            <p
+              className="
+                mt-3
+                text-sm
+                text-red-600
+              "
+              role="alert"
+            >
               {rangeError}
             </p>
           )}
@@ -675,7 +677,13 @@ export default function Calendar({ year = 2026 }: { year?: number }) {
               Working hours
             </h3>
 
-            <div className="grid gap-5 sm:grid-cols-3">
+            <div
+              className="
+              grid
+              gap-5
+              sm:grid-cols-3
+            "
+            >
               {/* Working day */}
 
               <div>
@@ -828,7 +836,8 @@ export default function Calendar({ year = 2026 }: { year?: number }) {
               className="
                 rounded-lg
                 bg-slate-800
-                px-5 py-2.5
+                px-5
+                py-2.5
                 text-sm
                 font-medium
                 text-white
