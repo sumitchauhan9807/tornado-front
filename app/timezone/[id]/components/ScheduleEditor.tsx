@@ -30,7 +30,7 @@ function getYearCalendar(year: number): Month[] {
       month: 'long',
     });
 
-    const firstDay = firstDate.getDay();
+    const firstDay = (firstDate.getDay() + 6) % 7;
     const daysInMonth = new Date(year, month + 1, 0).getDate();
 
     const days: Day[] = [];
@@ -79,7 +79,7 @@ export default function ScheduleEditor({data}) {
 
   const [rangeError, setRangeError] = useState('');
 
-  const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
   /*
    * Convert a calendar date into YYYY-MM-DD.
@@ -328,7 +328,7 @@ export default function ScheduleEditor({data}) {
                 {/* Empty cells before first day */}
 
                 {Array.from({
-                  length: monthData.firstDay,
+                  length: (monthData.firstDay + 6) % 7,
                 }).map((_, index) => (
                   <div
                     key={`empty-${index}`}

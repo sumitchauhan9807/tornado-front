@@ -1,0 +1,2675 @@
+d832eb1bd5ea034da0aae490620fc1e6b1f874ced1225ff749a6ce28c3447b796e739abfdac88f06b6931c2bb7d8ae0a122425b76bb420e7cd3baac53c48b8458bd6b54d89cc5244152dfb2bb85d1bf13ced7e04f2020712cfd13fbf168b787a723afed2a7337b9e8431aba9a63aeecfae08f32554fa3ffb5b6c966b708e8a8d
+
+
+update api timezone
+
+PUT: http://localhost:1337/api/timezones/x8ruj7gtbmoo69ckdhlwxk8z
+
+body: 
+
+{
+  "data": {
+    "schedule": [
+      {
+        "days": [
+          {
+            "wd": "Thursday",
+            "date": 1,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": false
+          },
+          {
+            "wd": "Friday",
+            "date": 2,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 3,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 4,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 5,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 6,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 7,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 8,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 9,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": false
+          },
+          {
+            "wd": "Saturday",
+            "date": 10,
+            "openTime": "09:00",
+            "closeTime": "12:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 11,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 12,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 13,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 14,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 15,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 16,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 17,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 18,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 19,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 20,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 21,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 22,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 23,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 24,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 25,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 26,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 27,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 28,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 29,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 30,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 31,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          }
+        ],
+        "name": "January",
+        "firstDay": 4
+      },
+      {
+        "days": [
+          {
+            "wd": "Sunday",
+            "date": 1,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 2,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 3,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 4,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 5,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 6,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 7,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 8,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 9,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 10,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 11,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 12,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 13,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 14,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 15,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 16,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 17,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 18,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 19,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 20,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 21,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 22,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 23,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 24,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 25,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 26,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 27,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 28,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          }
+        ],
+        "name": "February",
+        "firstDay": 0
+      },
+      {
+        "days": [
+          {
+            "wd": "Sunday",
+            "date": 1,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 2,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 3,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 4,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 5,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 6,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 7,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 8,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 9,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 10,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 11,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 12,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 13,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 14,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 15,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 16,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 17,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 18,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 19,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 20,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 21,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 22,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 23,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 24,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 25,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 26,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 27,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 28,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 29,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 30,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 31,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          }
+        ],
+        "name": "March",
+        "firstDay": 0
+      },
+      {
+        "days": [
+          {
+            "wd": "Wednesday",
+            "date": 1,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 2,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 3,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 4,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 5,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 6,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 7,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 8,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 9,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 10,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 11,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 12,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 13,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 14,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 15,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 16,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 17,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 18,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 19,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 20,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 21,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 22,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 23,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 24,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 25,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 26,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 27,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 28,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 29,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 30,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          }
+        ],
+        "name": "April",
+        "firstDay": 3
+      },
+      {
+        "days": [
+          {
+            "wd": "Friday",
+            "date": 1,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 2,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 3,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 4,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 5,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 6,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 7,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 8,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 9,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 10,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 11,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 12,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 13,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 14,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 15,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 16,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 17,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 18,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 19,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 20,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 21,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 22,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 23,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 24,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 25,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 26,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 27,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 28,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 29,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 30,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 31,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          }
+        ],
+        "name": "May",
+        "firstDay": 5
+      },
+      {
+        "days": [
+          {
+            "wd": "Monday",
+            "date": 1,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 2,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 3,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 4,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 5,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 6,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 7,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 8,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 9,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 10,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 11,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 12,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 13,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 14,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 15,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 16,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 17,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 18,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 19,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 20,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 21,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 22,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 23,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 24,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 25,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 26,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 27,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 28,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 29,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 30,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          }
+        ],
+        "name": "June",
+        "firstDay": 1
+      },
+      {
+        "days": [
+          {
+            "wd": "Wednesday",
+            "date": 1,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 2,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 3,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 4,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 5,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 6,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 7,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 8,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 9,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 10,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 11,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 12,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 13,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 14,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 15,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 16,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 17,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 18,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 19,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 20,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 21,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 22,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 23,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 24,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 25,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 26,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 27,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 28,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 29,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 30,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 31,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          }
+        ],
+        "name": "July",
+        "firstDay": 3
+      },
+      {
+        "days": [
+          {
+            "wd": "Saturday",
+            "date": 1,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 2,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 3,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 4,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 5,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 6,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 7,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 8,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 9,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 10,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 11,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 12,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 13,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 14,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 15,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 16,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 17,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 18,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 19,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 20,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 21,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 22,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 23,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 24,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 25,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 26,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 27,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 28,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 29,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 30,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 31,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          }
+        ],
+        "name": "August",
+        "firstDay": 6
+      },
+      {
+        "days": [
+          {
+            "wd": "Tuesday",
+            "date": 1,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 2,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 3,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 4,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 5,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 6,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 7,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 8,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 9,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 10,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 11,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 12,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 13,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 14,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 15,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 16,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 17,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 18,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 19,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 20,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 21,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 22,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 23,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 24,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 25,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 26,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 27,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 28,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 29,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 30,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          }
+        ],
+        "name": "September",
+        "firstDay": 2
+      },
+      {
+        "days": [
+          {
+            "wd": "Thursday",
+            "date": 1,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 2,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 3,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 4,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 5,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 6,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 7,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 8,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 9,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 10,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 11,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 12,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 13,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 14,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 15,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 16,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 17,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 18,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 19,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 20,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 21,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 22,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 23,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 24,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 25,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 26,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 27,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 28,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 29,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 30,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 31,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          }
+        ],
+        "name": "October",
+        "firstDay": 4
+      },
+      {
+        "days": [
+          {
+            "wd": "Sunday",
+            "date": 1,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 2,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 3,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 4,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 5,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 6,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 7,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 8,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 9,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 10,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 11,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 12,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 13,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 14,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 15,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 16,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 17,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 18,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 19,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 20,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 21,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 22,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 23,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 24,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 25,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 26,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 27,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 28,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 29,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 30,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          }
+        ],
+        "name": "November",
+        "firstDay": 0
+      },
+      {
+        "days": [
+          {
+            "wd": "Tuesday",
+            "date": 1,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 2,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 3,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 4,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 5,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 6,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 7,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 8,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 9,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 10,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 11,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 12,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 13,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 14,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 15,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 16,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 17,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 18,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 19,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 20,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 21,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 22,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 23,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 24,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Friday",
+            "date": 25,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Saturday",
+            "date": 26,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Sunday",
+            "date": 27,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Monday",
+            "date": 28,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Tuesday",
+            "date": 29,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Wednesday",
+            "date": 30,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          },
+          {
+            "wd": "Thursday",
+            "date": 31,
+            "openTime": "09:00",
+            "closeTime": "20:30",
+            "isWorking": true
+          }
+        ],
+        "name": "December",
+        "firstDay": 2
+      }
+    ]
+  }
+}
+
+
+/////////////////////////////////////////////////////
+
+{
+  "employeeId": "EMP001",
+  "dates": [
+    {
+      "date": "2026-01-01",
+      "openTime": "08:30",
+      "closeTime": "15:30",
+      "isWorking": true
+    },
+    {
+      "date": "2026-01-02",
+      "openTime": "09:00",
+      "closeTime": "20:30",
+      "isWorking": true
+    },
+    {
+      "date": "2026-01-03",
+      "openTime": null,
+      "closeTime": null,
+      "isWorking": false
+    },
+    {
+      "date": "2026-01-04",
+      "openTime": "10:00",
+      "closeTime": "18:00",
+      "isWorking": true
+    }
+  ]
+}

@@ -1,1 +1,3 @@
-export const production = true;
+export const production = false;
+export const STRAPI_TOKEN = 'd832eb1bd5ea034da0aae490620fc1e6b1f874ced1225ff749a6ce28c3447b796e739abfdac88f06b6931c2bb7d8ae0a122425b76bb420e7cd3baac53c48b8458bd6b54d89cc5244152dfb2bb85d1bf13ced7e04f2020712cfd13fbf168b787a723afed2a7337b9e8431aba9a63aeecfae08f32554fa3ffb5b6c966b708e8a8d';
+export const APP_TOKEN = 'sdfsdf23423434';
