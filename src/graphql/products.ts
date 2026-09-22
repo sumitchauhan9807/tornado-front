@@ -30,6 +30,7 @@ export const PRODUCTS_QUERY = gql`
             content {
               ...AnimationContentFields
               ...AnimationType2Fields
+              ...AnimationType3Fields
             }
           }
         }

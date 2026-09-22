@@ -10,7 +10,8 @@ const Type5 = lazy(() => import("./Type5"));
 
 const componentMap = {
   'ComponentHeroAnimationComponentsType1': Type1,
-  "ComponentHeroAnimationComponentsAnimationType2":Type2
+  "ComponentHeroAnimationComponentsAnimationType2":Type2,
+  "ComponentHeroAnimationComponentsAnimationType3":Type3
   
   // add others here
 };

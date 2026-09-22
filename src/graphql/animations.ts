@@ -32,4 +32,18 @@ export const ANIMATION_CONTENT_FRAGMENT = gql`
     topLeft
     topRight
   }
+
+  fragment AnimationType3Fields on ComponentHeroAnimationComponentsAnimationType3 {
+    SubHeading
+    heading
+    svg
+    bottomItems {
+      value
+      name
+    }
+    OrbitalItems {
+      svg
+      text
+    }
+  }
 `;
