@@ -46,4 +46,40 @@ export const ANIMATION_CONTENT_FRAGMENT = gql`
       text
     }
   }
+
+  fragment AnimationType4Fields on ComponentHeroAnimationComponentsAnimationType4 {
+    bottomText
+    heading
+    subHeading
+    svg
+    OrbitalItems {
+      svg
+      text
+    }
+  }
+
+  fragment AnimationType5Fields on ComponentHeroAnimationComponentsAnimationType5 {
+    svg
+    subText
+    number
+    heading
+    dialerGrid {
+      number
+      text
+    }
+  }
+  fragment AnimationType6Fields on ComponentHeroAnimationComponentsAnimationType6 {
+    svg
+    subHeading
+    bottomText2
+    bottomText1
+    OuterItems {
+      svg
+      text
+    }
+    OrbitalItems {
+      svg
+      text
+    }
+  }
 `;

@@ -31,6 +31,9 @@ export const PRODUCTS_QUERY = gql`
               ...AnimationContentFields
               ...AnimationType2Fields
               ...AnimationType3Fields
+              ...AnimationType4Fields
+              ...AnimationType5Fields
+              ...AnimationType6Fields
             }
           }
         }

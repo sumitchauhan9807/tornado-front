@@ -1,26 +1,27 @@
-
-import { lazy, Suspense } from "react";
-import { PageSkeleton } from "../Skeletons";
-const Type1 = lazy(() => import("./Type1"));
-const Type2 = lazy(() => import("./Type2"));
-const Type3 = lazy(() => import("./Type3"));
-const Type4 = lazy(() => import("./Type4"));
-const Type5 = lazy(() => import("./Type5"));
-
+import { lazy, Suspense } from 'react';
+import { PageSkeleton } from '../Skeletons';
+const Type1 = lazy(() => import('./Type1'));
+const Type2 = lazy(() => import('./Type2'));
+const Type3 = lazy(() => import('./Type3'));
+const Type4 = lazy(() => import('./Type4'));
+const Type5 = lazy(() => import('./Type5'));
+const Type6 = lazy(() => import('./Type6'));
 
 const componentMap = {
-  'ComponentHeroAnimationComponentsType1': Type1,
-  "ComponentHeroAnimationComponentsAnimationType2":Type2,
-  "ComponentHeroAnimationComponentsAnimationType3":Type3
-  
+  ComponentHeroAnimationComponentsType1: Type1,
+  ComponentHeroAnimationComponentsAnimationType2: Type2,
+  ComponentHeroAnimationComponentsAnimationType3: Type3,
+  ComponentHeroAnimationComponentsAnimationType4: Type4,
+  ComponentHeroAnimationComponentsAnimationType5: Type5,
+  ComponentHeroAnimationComponentsAnimationType6: Type6,
+
   // add others here
 };
-
 
 const HeroAnimations = ({ data }) => {
   if (!data?.length) return null;
   return (
-    <Suspense fallback={<PageSkeleton/>}>
+    <Suspense fallback={<PageSkeleton />}>
       {data.map((component, index) => {
         const Component = componentMap[component.__typename];
 
