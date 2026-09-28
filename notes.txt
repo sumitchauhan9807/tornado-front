@@ -2673,3 +2673,8 @@ body:
     }
   ]
 }
+
+
+animations
+1. areventa new page
+2. change tornado footer adddress type

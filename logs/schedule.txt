@@ -1,0 +1,14 @@
+========== Scheduler Started: 2026-09-28T13:00:13.028Z ==========
+[2026-09-28T13:00:13.028Z] [Scheduler] Setting up jobs at 2026-09-28T13:00:13.028Z
+[2026-09-28T13:00:16.029Z] [Scheduler] Clients converted into 4 jobs.
+[2026-09-28T13:00:16.029Z] [Scheduler] Found 4 jobs for today.
+[2026-09-28T13:00:16.037Z] [Scheduler] Skipping 14:open - 08:00 Berlin time has already passed
+[2026-09-28T13:00:16.043Z] [Scheduler] Scheduled 14:close at 2026-09-28T18:30:00.000Z (20:30 Berlin time)
+[2026-09-28T13:00:16.044Z] [Scheduler] Skipping 6:open - 08:00 Berlin time has already passed
+[2026-09-28T13:00:16.045Z] [Scheduler] Scheduled 6:close at 2026-09-28T18:30:00.000Z (20:30 Berlin time)
+[2026-09-28T13:00:16.046Z] [Scheduler] Skipping 26:open - 09:00 Berlin time has already passed
+[2026-09-28T13:00:16.048Z] [Scheduler] Scheduled 26:close at 2026-09-28T18:30:00.000Z (20:30 Berlin time)
+[2026-09-28T13:00:16.048Z] [Scheduler] No openTime for 60
+[2026-09-28T13:00:16.049Z] [Scheduler] No closeTime for 60
+[2026-09-28T13:00:16.049Z] [Scheduler] Setup complete. Active schedules: 3
+[2026-09-28T13:00:16.062Z] [Scheduler] Scheduler started successfully
