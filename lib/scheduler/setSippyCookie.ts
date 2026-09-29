@@ -5,7 +5,32 @@ const LOG_DIR = path.join(process.cwd(), 'logs');
 const COOKIE_DIR = path.join(process.cwd(), 'sippy');
 
 const LOG_FILE = path.join(LOG_DIR, 'login.txt');
+const SCHEDULE_LOG_FILE = path.join(LOG_DIR, 'schedule.txt');
+
 const COOKIE_FILE = path.join(COOKIE_DIR, 'cookie.txt');
+
+function getTimestamp() {
+  return new Date().toLocaleString('en-DE', {
+    weekday: 'long',
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false,
+    timeZone: 'Europe/Berlin',
+  });
+}
+
+async function writeLog(message) {
+  const line = `${message}\n`;
+
+  await Promise.all([
+    fs.appendFile(LOG_FILE, line, 'utf8'),
+    fs.appendFile(SCHEDULE_LOG_FILE, line, 'utf8'),
+  ]);
+}
 
 const params = new URLSearchParams({
   acct_type: 'customer',
@@ -21,24 +46,15 @@ export const setSippyCookie = async () => {
   await fs.mkdir(LOG_DIR, { recursive: true });
   await fs.mkdir(COOKIE_DIR, { recursive: true });
 
-  // Timestamp for this login attempt
-  const timestamp = new Date().toLocaleString('en-IN', {
-    weekday: 'long',
-    day: '2-digit',
-    month: '2-digit',
-    year: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-    hour12: true,
-    timeZone: 'Asia/Kolkata',
-  });
+  // --------------------------------------------------
+  // EXACT LOGIN ATTEMPT TIME
+  // --------------------------------------------------
 
-  // Log every login attempt as a new line
-  await fs.appendFile(
-    LOG_FILE,
-    `${timestamp} - Login attempt\n`,
-    'utf8'
+  const timestamp = getTimestamp();
+
+  // Write login attempt to BOTH log files immediately
+  await writeLog(
+    `[Sippy Login] ${timestamp} - Login attempt started`
   );
 
   try {
@@ -57,15 +73,13 @@ export const setSippyCookie = async () => {
       }
     );
 
-    console.log('Status:', response.status);
-    console.log('Location:', response.headers.get('location'));
-
-    // Get Set-Cookie
+    const location = response.headers.get('location');
     const setCookie = response.headers.get('set-cookie');
 
-    console.log('Set-Cookie:', setCookie);
+    // --------------------------------------------------
+    // COOKIE RECEIVED
+    // --------------------------------------------------
 
-    // Save cookie response
     if (setCookie) {
       await fs.writeFile(
         COOKIE_FILE,
@@ -73,39 +87,39 @@ export const setSippyCookie = async () => {
         'utf8'
       );
 
-      console.log(`Cookie saved to: ${COOKIE_FILE}`);
+      await writeLog(
+        `[Sippy Login] ${timestamp} - Login completed - HTTP ${response.status} - Set-Cookie received`
+      );
     } else {
-      console.log('No Set-Cookie header received.');
+      // ------------------------------------------------
+      // LOGIN REQUEST COMPLETED BUT NO COOKIE
+      // ------------------------------------------------
 
-      await fs.appendFile(
-        LOG_FILE,
-        `${timestamp} - No Set-Cookie received (HTTP ${response.status})\n`,
-        'utf8'
+      await writeLog(
+        `[Sippy Login] ${timestamp} - Login completed - HTTP ${response.status} - No Set-Cookie received`
       );
     }
 
     const body = await response.text();
 
-    console.log('Response:', body);
-
-    // Log result
-    await fs.appendFile(
-      LOG_FILE,
-      `${timestamp} - Login response: HTTP ${response.status}\n`,
-      'utf8'
-    );
-
     return {
       status: response.status,
-      location: response.headers.get('location'),
+      location,
       cookie: setCookie,
       body,
     };
   } catch (error) {
-    await fs.appendFile(
-      LOG_FILE,
-      `${timestamp} - Login error: ${error.message}\n`,
-      'utf8'
+    // --------------------------------------------------
+    // LOGIN FAILED
+    // --------------------------------------------------
+
+    const message =
+      error instanceof Error
+        ? error.message
+        : String(error);
+
+    await writeLog(
+      `[Sippy Login] ${timestamp} - Login FAILED - ${message}`
     );
 
     console.error('Login error:', error);
