@@ -1,6 +1,6 @@
 import { headers } from 'next/headers';
-
-const API_URL = 'https://next.tornadodialer.net/api/schedule';
+import { production } from '@/env';
+const API_URL = production ? 'https://next.tornadodialer.net/api/schedule' : 'http://localhost:3000/api/schedule'
 
 type LogType = 'scheduled' | 'skipped' | 'running' | 'completed' | 'success' | 'error' | 'info';
 
@@ -189,10 +189,14 @@ export default async function SchedulePage() {
             <div>
               <h2 className="font-semibold text-white">Scheduler Activity Tornado Dialer</h2>
 
-              <p style={{color:"white"}} className="mt-1 text-xs text-slate-500">{entries.length} log entries</p>
+              <p style={{ color: 'white' }} className="mt-1 text-xs text-slate-500">
+                {entries.length} log entries
+              </p>
             </div>
 
-            <div style={{color:"white"}} className="text-xs text-slate-600">Server time: {generatedAt.toLocaleTimeString()}</div>
+            <div style={{ color: 'white' }} className="text-xs text-slate-600">
+              Server time: {generatedAt.toLocaleTimeString()}
+            </div>
           </div>
 
           {entries.length === 0 ? (
@@ -219,7 +223,11 @@ export default async function SchedulePage() {
                       {/* Log */}
                       <div className="min-w-0 flex-1">
                         <div className="flex flex-wrap items-center gap-2">
-                          {entry.timestamp && <span style={{color:"white"}} className="font-mono text-xs text-slate-900">{formatTime(entry.timestamp)}</span>}
+                          {entry.timestamp && (
+                            <span style={{ color: 'white' }} className="font-mono text-xs text-slate-900">
+                              {formatTime(entry.timestamp)}
+                            </span>
+                          )}
 
                           {entry.category && <span className="rounded-md bg-slate-800 px-2 py-0.5 font-mono text-[10px] text-slate-400">{entry.category}</span>}
 
@@ -239,14 +247,18 @@ export default async function SchedulePage() {
         {/* Raw logs */}
         {logs && (
           <details className="mt-6 overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/40">
-            <summary style={{color:"white"}} className="cursor-pointer px-5 py-4 text-sm font-medium text-slate-900 transition hover:text-white">View raw logs</summary>
+            <summary style={{ color: 'white' }} className="cursor-pointer px-5 py-4 text-sm font-medium text-slate-900 transition hover:text-white">
+              View raw logs
+            </summary>
 
-            <pre style={{color:"white"}} className="max-h-[500px] overflow-auto border-t border-slate-800 bg-black/30 p-5  leading-6 text-slate-900">{logs}</pre>
+            <pre style={{ color: 'white' }} className="max-h-[500px] overflow-auto border-t border-slate-800 bg-black/30 p-5  leading-6 text-slate-900">
+              {logs}
+            </pre>
           </details>
         )}
 
         {/* Footer */}
-        <footer style={{color:"white"}} className="mt-6 flex flex-col gap-2 text-xs text-slate-700 sm:flex-row sm:items-center sm:justify-between">
+        <footer style={{ color: 'white' }} className="mt-6 flex flex-col gap-2 text-xs text-slate-700 sm:flex-row sm:items-center sm:justify-between">
           <span>Scheduler Monitor</span>
 
           <span>Server-rendered • {requestHeaders.get('host') || 'localhost'}</span>
