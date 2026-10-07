@@ -6,6 +6,10 @@ const Type3 = lazy(() => import('./Type3'));
 const Type4 = lazy(() => import('./Type4'));
 const Type5 = lazy(() => import('./Type5'));
 const Type6 = lazy(() => import('./Type6'));
+const Type7 = lazy(() => import('./Type7'));
+const Type8 = lazy(() => import('./Type8'));
+
+
 
 const componentMap = {
   ComponentHeroAnimationComponentsType1: Type1,
@@ -14,6 +18,9 @@ const componentMap = {
   ComponentHeroAnimationComponentsAnimationType4: Type4,
   ComponentHeroAnimationComponentsAnimationType5: Type5,
   ComponentHeroAnimationComponentsAnimationType6: Type6,
+  ComponentHeroAnimationComponentsAnimationType7: Type7,
+  ComponentHeroAnimationComponentsAnimationType8: Type8,
+
 
   // add others here
 };

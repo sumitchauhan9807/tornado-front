@@ -34,6 +34,9 @@ export const HOME_QUERY = gql`
               ...AnimationType4Fields
               ...AnimationType5Fields
               ...AnimationType6Fields
+              ...AnimationType7Fields
+              ...AnimationType8Fields
+
             }
           }
         }

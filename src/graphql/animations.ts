@@ -82,4 +82,26 @@ export const ANIMATION_CONTENT_FRAGMENT = gql`
       text
     }
   }
+
+  fragment AnimationType7Fields on ComponentHeroAnimationComponentsAnimationType7 {
+    svg
+    subHeading
+    heading
+    OrbitalItems {
+      svg
+      text
+    }
+  }
+  fragment AnimationType8Fields on ComponentHeroAnimationComponentsAnimationType8 {
+    heading2
+    heading1
+    statsValues {
+      text
+      type
+    }
+    OrbitalItems {
+      svg
+      text
+    }
+  }
 `;
