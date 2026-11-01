@@ -40,10 +40,10 @@ function MobileLinkMulti({ data }) {
               <p className="px-3 pb-1 pt-2 font-mono text-[10.5px] uppercase tracking-[0.14em] text-ink-subtle">{item.name}</p>
               {item.subDropdowns.map((link, index) => {
                 return (
-                  <a key={index} className="flex items-center gap-2.5 rounded-md px-4 py-2.5 text-[15px] font-medium text-ink hover:bg-surface-muted" href="/toll-free-numbers">
+                  <Link key={index} className="flex items-center gap-2.5 rounded-md px-4 py-2.5 text-[15px] font-medium text-ink hover:bg-surface-muted" href={'/'+link.link}>
                     <span dangerouslySetInnerHTML={{ __html: link.svg }}></span>
                     <span>{link.name}</span>
-                  </a>
+                  </Link>
                 );
               })}
             </div>

@@ -1,0 +1,32 @@
+mutation UpdateProduct($data: ProductInput!) {
+  updateProduct(documentId: "ikh59m0d3oi662hjqit88fpd", data: $data) {
+    documentId
+    createdAt
+    updatedAt
+    publishedAt
+  }
+}
+
+
+
+
+{
+  "data": {
+    "content": [
+      {
+        "__typename": "ComponentCommonFaq",
+        "blockHeading": {
+          "SubHeading": "FAQ",
+          "heading": "Updated frequently asked questions",
+          "description": "Find answers here."
+        },
+        "qna": [
+          {
+            "question": "Your question",
+            "answer": "Your answer"
+          }
+        ]
+      }
+    ]
+  }
+}

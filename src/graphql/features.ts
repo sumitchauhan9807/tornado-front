@@ -1,0 +1,102 @@
+import { gql } from '@apollo/client';
+import { ANIMATION_CONTENT_FRAGMENT } from './animations';
+
+export const FEATURES_QUERY = gql`
+  query Features($slug: String!) {
+    features(filters: { slug: { eq: $slug } }) {
+      content {
+        ... on ComponentHeroHero1 {
+          bottomLists {
+            text
+          }
+
+          content
+
+          fancyHeading {
+            text
+            type
+          }
+
+          topHeading
+
+          heroButtons {
+            button {
+              text
+              link
+            }
+          }
+
+          animation {
+            content {
+              ...AnimationContentFields
+              ...AnimationType2Fields
+              ...AnimationType3Fields
+              ...AnimationType4Fields
+              ...AnimationType5Fields
+              ...AnimationType6Fields
+              ...AnimationType7Fields
+              ...AnimationType8Fields
+            }
+          }
+        }
+        ... on ComponentCommonServicesLists1 {
+          blockHeading {
+            SubHeading
+            description
+            heading
+          }
+          descriptionLists {
+            content
+            heading
+            svg
+            tags_link
+          }
+          servicesLayoutType: layoutType
+          listsPerRow
+        }
+
+        ... on ComponentCommonDescriptionListsBasic {
+          blockHeading {
+            SubHeading
+            description
+            heading
+          }
+          descriptionLayoutType: layoutType
+          lists {
+            text
+          }
+        }
+
+        ... on ComponentCommonFaq {
+          blockHeading {
+            SubHeading
+            description
+            heading
+          }
+          qna {
+            answer
+            question
+          }
+        }
+        ... on ComponentCommonCounterUp {
+          counterItem {
+            afterCountText
+            beforeCountText
+            countTextColored
+            countValue
+            heading
+            subText
+          }
+        }
+        ... on ComponentCommonContactForm {
+          action
+          heading
+          subText
+          buttonText
+        }
+      }
+    }
+  }
+
+  ${ANIMATION_CONTENT_FRAGMENT}
+`;
