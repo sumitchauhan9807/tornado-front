@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ========== Scheduler Started: Sunday, 01/11/2026, 16:44:06 ==========
 [Sunday, 01/11/2026, 16:44:06] [Scheduler] Setting up jobs at Sunday, 01/11/2026, 16:44:06
 [Sunday, 01/11/2026, 16:44:08] [Scheduler] Clients converted into 10 jobs.
@@ -26,3 +27,32 @@
 [Sunday, 01/11/2026, 16:44:08] [Sippy] Execution dates: []
 [Sunday, 01/11/2026, 16:44:08] [Sippy] Active Sippy Login schedules: 0
 [Sunday, 01/11/2026, 16:44:08] [Scheduler] Scheduler started successfully
+=======
+========== Scheduler Started: Sunday, 01/11/2026, 05:00:00 ==========
+[Sunday, 01/11/2026, 05:00:00] [Scheduler] Setting up jobs at Sunday, 01/11/2026, 05:00:00
+[Sunday, 01/11/2026, 05:00:00] [Scheduler] Clients converted into 10 jobs.
+[Sunday, 01/11/2026, 05:00:00] [Scheduler] Found 10 jobs for today.
+[Sunday, 01/11/2026, 05:00:00] [Scheduler] No openTime for 14
+[Sunday, 01/11/2026, 05:00:00] [Scheduler] No closeTime for 14
+[Sunday, 01/11/2026, 05:00:00] [Scheduler] No openTime for 26
+[Sunday, 01/11/2026, 05:00:00] [Scheduler] No closeTime for 26
+[Sunday, 01/11/2026, 05:00:00] [Scheduler] No openTime for 6
+[Sunday, 01/11/2026, 05:00:00] [Scheduler] No closeTime for 6
+[Sunday, 01/11/2026, 05:00:00] [Scheduler] No openTime for 8
+[Sunday, 01/11/2026, 05:00:00] [Scheduler] No closeTime for 8
+[Sunday, 01/11/2026, 05:00:00] [Scheduler] No openTime for 9
+[Sunday, 01/11/2026, 05:00:00] [Scheduler] No closeTime for 9
+[Sunday, 01/11/2026, 05:00:00] [Scheduler] No openTime for 10
+[Sunday, 01/11/2026, 05:00:00] [Scheduler] No closeTime for 10
+[Sunday, 01/11/2026, 05:00:00] [Scheduler] No openTime for 11
+[Sunday, 01/11/2026, 05:00:00] [Scheduler] No closeTime for 11
+[Sunday, 01/11/2026, 05:00:00] [Scheduler] No openTime for 12
+[Sunday, 01/11/2026, 05:00:00] [Scheduler] No closeTime for 12
+[Sunday, 01/11/2026, 05:00:00] [Scheduler] No openTime for 13
+[Sunday, 01/11/2026, 05:00:00] [Scheduler] No closeTime for 13
+[Sunday, 01/11/2026, 05:00:00] [Scheduler] No openTime for 27
+[Sunday, 01/11/2026, 05:00:00] [Scheduler] No closeTime for 27
+[Sunday, 01/11/2026, 05:00:00] [Scheduler] Setup complete. Active schedules: 0
+[Sunday, 01/11/2026, 05:00:00] [Sippy] Execution dates: []
+[Sunday, 01/11/2026, 05:00:00] [Sippy] Active Sippy Login schedules: 0
+>>>>>>> 80eb2bb (asd)
