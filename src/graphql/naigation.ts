@@ -6,6 +6,7 @@ export const NAVIGATION_QUERY = gql`
       links {
         type
         name
+        link
         dropdowns {
           svg
           id

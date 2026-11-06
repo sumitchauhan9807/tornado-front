@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { appendBaseUrl } from "@/src/helpers/common"
+import Link from 'next/link';
 
 
 
@@ -24,13 +25,13 @@ function DropDownSingle({data}) {
               <div className="w-[272px] flex-none border-r border-border pr-2">
                 {data.dropdowns.map((item, index) => {
                   return (
-                    <a
+                    <Link
                       key={index}
                       onMouseEnter={() => {
                         setActive(item.name);
                       }}
                       className={`flex w-full items-center gap-3 rounded-xl px-2.5 py-2.5 text-left transition-colors ${item.name == active ? 'bg-surface-muted' : 'hover:bg-surface-muted/60'} `}
-                      href="/insurance-contact-center-software"
+                      href={item.link ? "/"+item.link : ""}
                     >
                       <span dangerouslySetInnerHTML={{ __html: item.svg }} className={`inline-flex h-8 w-8 flex-none items-center justify-center rounded-lg transition-colors ${item.name == active ? 'bg-accent-soft text-accent' : 'bg-surface-muted text-ink-strong'} `}>
                         {/* {item.icon} */}
@@ -42,7 +43,7 @@ function DropDownSingle({data}) {
                       <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-right h-4 w-4 flex-none transition-colors text-accent">
                         <path d="m9 18 6-6-6-6" />
                       </svg>
-                    </a>
+                    </Link>
                   );
                 })}
               </div>

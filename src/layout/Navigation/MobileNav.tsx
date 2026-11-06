@@ -13,10 +13,10 @@ function MobileLinkSingle({ data }) {
       <div className="pb-2 pl-1">
         {data.dropdowns.map((item, index) => {
           return (
-            <a key={index} className="flex items-center gap-2.5 rounded-md px-4 py-2.5 text-[15px] font-medium text-ink hover:bg-surface-muted" href="/insurance-contact-center-software">
+            <Link key={index} className="flex items-center gap-2.5 rounded-md px-4 py-2.5 text-[15px] font-medium text-ink hover:bg-surface-muted" href={item.link ? "/"+item.link : ""}>
               <span dangerouslySetInnerHTML={{ __html: item.svg }}></span>
               <span>{item.name}</span>
-            </a>
+            </Link>
           );
         })}
       </div>

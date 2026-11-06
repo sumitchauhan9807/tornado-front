@@ -21,7 +21,7 @@ export default function Features() {
   if (error) return <p>Error</p>;
   // console.log(data?.home.content[0].)
   // console.log(data)
-  console.log(data?.features[0],"data?.features[0]")
+  // console.log(data?.features[0],"data?.features[0]")
   // return null
   if(data?.features.length == 0) return <h1>{id} feature not found</h1>
 
